@@ -1,3 +1,3 @@
 # Natours
 
-Fall in Deep Love with Nature
+Fall in Love with Nature
