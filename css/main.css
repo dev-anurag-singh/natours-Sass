@@ -259,6 +259,7 @@ body {
   position: relative;
   height: 52rem;
   perspective: 150rem;
+  -webkit-perspective: 150rem;
 }
 .card__side {
   backface-visibility: hidden;
@@ -269,6 +270,7 @@ body {
   right: 0;
   width: 100%;
   height: 52rem;
+  -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 }

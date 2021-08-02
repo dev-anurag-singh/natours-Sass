@@ -141,6 +141,8 @@
     top: 1rem;
   }
 
+  // Menu Animation
+
   &__checkbox:checked + &__button &__icon {
     background-color: transparent;
   }
