@@ -160,4 +160,43 @@
     font-size: 6rem;
     font-weight: 100;
   }
+
+  @include respond(tab-port) {
+    height: auto;
+    background-color: $color-white;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &__side {
+      position: relative;
+      height: auto;
+      box-shadow: none;
+      border-radius: unset;
+
+      &--back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &__cta {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transform: translate(0);
+      padding: 5rem;
+    }
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+    &__price-value {
+      font-size: 5rem;
+    }
+  }
 }

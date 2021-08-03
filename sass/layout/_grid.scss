@@ -2,6 +2,10 @@
   max-width: $grid-width;
   margin: auto;
 
+  @include respond(tab-port) {
+    max-width: 40rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $vertical-gutter;
   }
@@ -11,6 +15,15 @@
 
     &:not(:last-child) {
       margin-right: $horizontal-gutter;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $vertical-gutter-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
 

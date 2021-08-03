@@ -1,7 +1,57 @@
+// To fix Float Issues
 @mixin clearfix {
   &::after {
     content: '';
     display: table;
     clear: both;
+  }
+}
+
+// To align Item to Centre horizontally and vertically
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Responsive Media Queries for max-width
+
+@mixin responsiveMax($breakPoint) {
+  @media (max-width: $breakPoint) {
+    @content;
+  }
+}
+
+// Responsive Media Queries for min-width
+
+@mixin responsiveMin($breakPoint) {
+  @media (min-width: $breakPoint) {
+    @content;
+  }
+}
+
+// Responsive Media Queries for defined Width
+
+@mixin respond($breakPointName) {
+  @if $breakPointName == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakPointName == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakPointName == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakPointName == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
   }
 }
