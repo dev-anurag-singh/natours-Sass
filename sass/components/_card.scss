@@ -6,6 +6,7 @@
   -webkit-perspective: 150rem;
 
   &__side {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
     position: absolute;
@@ -161,7 +162,7 @@
     font-weight: 100;
   }
 
-  @include respond(tab-port) {
+  @media only screen and (max-width: 900px), only screen and (hover: none) {
     height: auto;
     background-color: $color-white;
     border-radius: 3px;

@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 
   @include respond(tab-land) {
     font-size: 56.25%; // 1rem = 9px
@@ -24,4 +25,9 @@ html {
 
 a {
   text-decoration: none;
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
 }
