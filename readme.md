@@ -1,5 +1,7 @@
 # Getting Started
 
+> Live Preview at https://dev-anurag-singh.github.io/natours-Sass/
+
 > To use this project node.js is required
 
 To begin, you'll need to install required dependencies by running
